@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій стартап | Симулятор управління стартапом</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Симулятор управління стартапом</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="my-startup.html" class="active">Мій стартап</a></li>
+      <li><a href="market.html">Ринок</a></li>
+      <li><a href="investors.html">Інвестори</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="startup-management">
+    <h2>Мій стартап</h2>
+    <div class="content">
+      <form id="startup-form">
+        <div class="form-group">
+          <label for="company-name">Назва компанії:</label>
+          <input type="text" id="company-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="industry">Сфера діяльності:</label>
+          <select id="industry" required>
+            <option value="">Оберіть сферу</option>
+            <option value="it">IT та програмне забезпечення</option>
+            <option value="ecommerce">Електронна комерція</option>
+            <option value="finance">Фінансові послуги</option>
+            <option value="healthcare">Охорона здоров'я</option>
+            <option value="education">Освітні технології</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="employees">Кількість працівників:</label>
+          <input type="number" id="employees" min="1" value="1">
+        </div>
+
+        <button type="submit">Створити стартап</button>
+      </form>
+
+      <div class="startup-dashboard hidden">
+        <h3>Панель управління</h3>
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-label">Прибуток:</span>
+            <span class="metric-value" id="profit">0</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Витрати:</span>
+            <span class="metric-value" id="expenses">0</span>
+          </div>
+        </div>
+
+        <h4>Ринки збуту</h4>
+        <div id="markets"></div>
+
+        <h4>Офіси</h4>
+        <div id="offices"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Симулятор управління стартапом. Всі права захищені.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

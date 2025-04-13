@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Симулятор управління стартапом - Інвестори</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1>Симулятор управління стартапом</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="my-startup.html">Мій стартап</a></li>
+      <li><a href="market.html">Ринок</a></li>
+      <li><a href="investors.html" class="active">Інвестори</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="investors">
+    <div class="investors-header">
+      <h2>Інвестиційні можливості</h2>
+      <p>Знайдіть потенційних інвесторів для свого стартапу</p>
+    </div>
+
+    <div class="content">
+      <div class="investor-filters">
+        <div class="filter-group">
+          <label for="industry-filter"><i class="fas fa-filter"></i> Сфера:</label>
+          <select id="industry-filter">
+            <option value="all">Всі сфери</option>
+            <option value="tech">Технології</option>
+            <option value="fintech">Фінтех</option>
+            <option value="healthcare">Охорона здоров'я</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="education">Освіта</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="amount-filter"><i class="fas fa-dollar-sign"></i> Сума:</label>
+          <select id="amount-filter">
+            <option value="all">Будь-яка</option>
+            <option value="small">До $100k</option>
+            <option value="medium">$100k-$1M</option>
+            <option value="large">Понад $1M</option>
+          </select>
+        </div>
+        <button class="search-btn"><i class="fas fa-search"></i> Пошук</button>
+      </div>
+
+      <div class="investor-stats">
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <div>
+            <h3>142</h3>
+            <p>Активних інвесторів</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-hand-holding-usd"></i>
+          <div>
+            <h3>$87M</h3>
+            <p>Загальний об'єм інвестицій</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-rocket"></i>
+          <div>
+            <h3>63</h3>
+            <p>Профінансованих стартапів</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table id="investors-table">
+          <thead>
+          <tr>
+            <th>Назва</th>
+            <th>Сфера інтересів</th>
+            <th>Тип інвестора</th>
+            <th>Об'єм інвестицій</th>
+            <th>Стадії</th>
+            <th>Дія</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <div class="investor-profile">
+                <img src="https://via.placeholder.com/40" alt="Horizon Ventures" class="investor-logo">
+                <span>Horizon Ventures</span>
+              </div>
+            </td>
+            <td>Технології, AI, Блокчейн</td>
+            <td>Венчурний фонд</td>
+            <td>$500k - $5M</td>
+            <td>Seed, Series A</td>
+            <td><button class="contact-btn"><i class="fas fa-envelope"></i> Контакт</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="investor-profile">
+                <img src="https://via.placeholder.com/40" alt="Green Angel" class="investor-logo">
+                <span>Green Angel</span>
+              </div>
+            </td>
+            <td>Еко-технології, Відновлювана енергетика</td>
+            <td>Ангельський інвестор</td>
+            <td>$50k - $250k</td>
+            <td>Pre-seed, Seed</td>
+            <td><button class="contact-btn"><i class="fas fa-envelope"></i> Контакт</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="investor-profile">
+                <img src="https://via.placeholder.com/40" alt="FinTech Capital" class="investor-logo">
+                <span>FinTech Capital</span>
+              </div>
+            </td>
+            <td>Фінтех, Банкінг, Платежі</td>
+            <td>Венчурний фонд</td>
+            <td>$1M - $10M</td>
+            <td>Series A, B</td>
+            <td><button class="contact-btn"><i class="fas fa-envelope"></i> Контакт</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="investor-profile">
+                <img src="https://via.placeholder.com/40" alt="MedVentures" class="investor-logo">
+                <span>MedVentures</span>
+              </div>
+            </td>
+            <td>Медицина, Біотех, HealthTech</td>
+            <td>Корпоративний фонд</td>
+            <td>$250k - $2M</td>
+            <td>Seed, Series A</td>
+            <td><button class="contact-btn"><i class="fas fa-envelope"></i> Контакт</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="investor-profile">
+                <img src="https://via.placeholder.com/40" alt="EduGrowth" class="investor-logo">
+                <span>EduGrowth</span>
+              </div>
+            </td>
+            <td>Освітні технології, EdTech</td>
+            <td>Інкубатор</td>
+            <td>$25k - $100k</td>
+            <td>Pre-seed</td>
+            <td><button class="contact-btn"><i class="fas fa-envelope"></i> Контакт</button></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="investment-tips">
+        <h3><i class="fas fa-lightbulb"></i> Поради щодо пошуку інвестицій</h3>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <i class="fas fa-bullseye"></i>
+            <h4>Чіткий фокус</h4>
+            <p>Чітко формулюйте свою пропозицію та унікальні переваги вашого продукту</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-chart-line"></i>
+            <h4>Показники</h4>
+            <p>Готуйте зрозумілі фінансові прогнози та показники росту</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-network-wired"></i>
+            <h4>Мережа</h4>
+            <p>Використовуйте професійні мережі для знайомства з інвесторами</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-file-alt"></i>
+            <h4>Документи</h4>
+            <p>Підготуйте всі необхідні документи та презентації заздалегідь</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Симулятор управління стартапом. Всі права захищені.</p>
+</footer>
+<script src="inv.js"></script>
+</body>
+</html>
