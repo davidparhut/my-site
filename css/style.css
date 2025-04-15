@@ -325,14 +325,6 @@ footer p {
   animation: fadeIn 0.5s ease forwards;
 }
 
-/* Адаптація для мобільних пристроїв */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: var(--space-xs);
-    align-items: center;
-  }
-
   section {
     padding: var(--space-md) var(--space-sm);
   }
@@ -345,17 +337,8 @@ footer p {
     padding: var(--space-xs) var(--space-sm);
     font-size: 0.9rem;
   }
-}
 
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
 
-  section h2 {
-    font-size: 1.5rem;
-  }
-}
 .info-section {
   display: flex;
   flex-direction: column;
@@ -627,14 +610,33 @@ select {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  .investor-filters {
-    flex-direction: column;
-    align-items: stretch;
-  }
+
 
   table {
     display: block;
     overflow-x: auto;
+  }
+
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 12px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
   }
 }
