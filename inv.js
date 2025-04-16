@@ -5,7 +5,6 @@
   const industry = document.getElementById('industry-filter').value;
   const amount = document.getElementById('amount-filter').value;
   alert(`Застосовано фільтри: Сфера - ${industry}, Сума - ${amount}`);
-  // Тут буде реальна логіка фільтрації
 });
 
   // Кнопки контакту

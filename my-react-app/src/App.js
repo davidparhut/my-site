@@ -1,16 +1,15 @@
-// /src/App.js
 import React from 'react';
-import MarketGrowthChart from './components/MarketGrowthChart';
-import ForecastChart from './components/ForecastChart';
+import MarketGrowthChart from '/Users/apple/Desktop/ВЕБ/my_proj/my-react-app/src/Components/MarketGrowthChart.js';
+import ForecastChart from '/Users/apple/Desktop/ВЕБ/my_proj/my-react-app/src/Components/ForecastChart.js';
 
-const App = () => {
+function App() {
   return (
-    <div className="app">
-      <h1>Графіки зростання</h1>
+    <div className="App">
+      <h1>Графіки зростання ринку</h1>
       <MarketGrowthChart />
       <ForecastChart />
     </div>
   );
-};
+}
 
 export default App;
