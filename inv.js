@@ -1,18 +1,31 @@
-  document.addEventListener('DOMContentLoaded', function() {
-  // Фільтрація інвесторів
-  const searchBtn = document.querySelector('.search-btn');
-  searchBtn.addEventListener('click', function() {
-  const industry = document.getElementById('industry-filter').value;
-  const amount = document.getElementById('amount-filter').value;
-  alert(`Застосовано фільтри: Сфера - ${industry}, Сума - ${amount}`);
-});
 
-  // Кнопки контакту
-  const contactBtns = document.querySelectorAll('.contact-btn');
-  contactBtns.forEach(btn => {
-  btn.addEventListener('click', function() {
-  const investorName = this.closest('tr').querySelector('.investor-profile span').textContent;
-  alert(`Запит на контакт відправлено до ${investorName}`);
-});
-});
-});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('investors.json')
+      .then(response => response.json())
+      .then(data => {
+        const tableBody = document.querySelector('#investors-table tbody');
+        tableBody.innerHTML = ''; // Очищуємо старі записи
+
+        data.forEach(investor => {
+          const row = document.createElement('tr');
+
+          row.innerHTML = `
+          <td>
+            <div class="investor-profile">
+              <img src="${investor.logo}" alt="${investor.name}" class="investor-logo">
+              <span>${investor.name}</span>
+            </div>
+          </td>
+          <td>${investor.industry}</td>
+          <td>${investor.type}</td>
+          <td>${investor.amount}</td>
+          <td>${investor.stages}</td>
+          <td><button class="contact-btn"><i class="fas fa-envelope"></i> Контакт</button></td>
+        `;
+
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => console.error('Помилка при зчитуванні інвесторів:', error));
+  });

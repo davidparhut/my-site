@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Horizon Ventures",
+    "logo": "https://via.placeholder.com/40",
+    "industry": "Технології, AI, Блокчейн",
+    "type": "Венчурний фонд",
+    "amount": "$500k - $5M",
+    "stages": "Seed, Series A"
+  },
+  {
+    "name": "Green Angel",
+    "logo": "https://via.placeholder.com/40",
+    "industry": "Еко-технології, Відновлювана енергетика",
+    "type": "Ангельський інвестор",
+    "amount": "$50k - $250M",
+    "stages": "Pre-seed, Seed"
+  },
+  {
+    "name": "Green Angel",
+    "logo": "https://via.placeholder.com/40",
+    "industry": "Еко-технології, Відновлювана енергетика",
+    "type": "Ангельський інвестор",
+    "amount": "$50k - $250M",
+    "stages": "Pre-seed, Seed"
+  }
+
+]
