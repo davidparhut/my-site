@@ -1,10 +1,13 @@
+import React from "react";
+import { Link } from "react-router-dom";
 export default function Home() {
+
     return (
         <main>
             <section className="hero">
                 <h2>Створіть свій віртуальний бізнес!</h2>
                 <p>Навчіться керувати стартапом у безпечному середовищі нашого симулятора.</p>
-                <a href="my-startup.html" className="cta-button">Почати</a>
+              <Link to="/auth" className="cta-button">Почати</Link>
             </section>
 
             <section className="features">
